@@ -7,19 +7,19 @@ body{
 .container {  
     height: 100vh;
     display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 0.7fr 1.3fr 1.3fr 0.7fr; 
-    grid-template-rows: 0.5fr 2.4fr 0.4fr 1.3fr 0.4fr 1fr 1.6fr 0.4fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "logo navbar navbar navbar"
-      ". bgimg bgimg ."
-      ". date date ."
-      "schedule schedule schedule schedule"
-      "schedule schedule schedule schedule"
-      "schedule schedule schedule schedule"
-      "schedule schedule schedule schedule"
-      ". . . ."
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 0.7fr 1fr 1.3fr 1.3fr 1fr 0.7fr; 
+  grid-template-rows: 0.5fr 2.4fr 0.4fr 1.3fr 0.4fr 1fr 1.6fr 0.4fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "logo navbar navbar navbar navbar navbar"
+    ". . bgimg bgimg . ."
+    ". . date date . ."
+    ". . schedule schedule . ."
+    ". . schedule schedule . ."
+    ". . schedule schedule . ."
+    ". . schedule schedule . ."
+    ". . . . . ."; 
   }
   
   .margin{
@@ -157,6 +157,7 @@ navlist a:last-child{
   .schedule { grid-area: schedule;
 display:block;
 position: relative; 
+justify-content: space-evenly;
 padding: 0;}
 
 .sched-card{
@@ -206,7 +207,7 @@ padding: 0;}
     margin-top: 50px ;
     margin-left: 0px;
     border-radius: 6%;
-    margin-right: 210px;
+    
 }
 
   
@@ -236,15 +237,20 @@ padding: 0;}
     position: fixed;
     bottom: 0;
 width: 100%;
-background: linear-gradient(to bottom right, #1e262d 46%, #ccffff 137%);}
+height: 100px;
+background: linear-gradient(to bottom right, #1e262d 46%, #ccffff 137%);
+padding-bottom: 0px;}
+
 
 .chicago-image{
     display: flex;
     position: relative;
-    width: 180px;
-    height: auto;
-    padding-top: 10px;
-    margin-top: 30px;
+    width: 140px;
+    height: 80px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 1px;
+    margin-bottom: 0px;
 }
 
 .bottom{
@@ -254,30 +260,21 @@ background: linear-gradient(to bottom right, #1e262d 46%, #ccffff 137%);}
     margin-left: 500px;
 }
 
-.sched-card{
-    display: flex;
-    position: relative;
-    justify-content: space-evenly;
-    border: 1px solid #e1e1e1;
-    padding: 1em;
-    margin-left:0;
-    margin-right:0;
-    padding: 15px;
-}
+
 
 .infoz{
     display: block;
     list-style-type: none;
-    margin-top: 20px;
-    padding-top:10px;
-    padding-bottom: 10px;
-    margin-left: 40px;
+    margin-top: 1px;
+    padding-top:1px;
+    padding-bottom: 1px;
+    margin-left: 10px;
 }
 
 .infoz li{
     font-family: 'Rubik', sans-serif;
-    margin-top: 9px;
-    padding: 3px;
+    margin-top: 0px;
+    padding: 1px;
     
 }
 
@@ -289,16 +286,16 @@ background: linear-gradient(to bottom right, #1e262d 46%, #ccffff 137%);}
 .showss{
     display: block;
     list-style-type: none;
-    margin-top: 20px;
-    padding-top:10px;
-    padding-bottom: 10px;
-    margin-left: 40px;
+    margin-top: 1px;
+    padding-top:1px;
+    padding-bottom: 1px;
+    margin-left: 1px;
 }
 
 .showss li{
     font-family: 'Rubik', sans-serif;
-    margin-top: 9px;
-    padding: 3px;
+    margin-top: 0px;
+    padding: 1px;
 }
 
 .showss a{
@@ -309,7 +306,7 @@ background: linear-gradient(to bottom right, #1e262d 46%, #ccffff 137%);}
 .connect{
     display: block;
     list-style-type: none;
-    margin-top: 70px;
+    margin-top: 1px;
     padding-top:10px;
     padding-bottom: 10px;
     margin-left: 40px;
